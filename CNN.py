@@ -80,7 +80,7 @@ for num in np.random.choice(np.arange(0, len(test_labels)), size=(5,)):
        for x, y, w, h in rects:
         cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 00), 2)
         object = img
-        cv2.putText(img, str(prediction[0]), (5, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
+        cv2.putText(img, str(prediction[train_labels]), (5, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
 
     # Show and print the Actual Image and Predicted Label Value
     print('Predicted Label: {}, Actual Value: {}'.format(prediction[0], np.argmax(test_labels[num])))
